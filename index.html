@@ -110,10 +110,37 @@
 
   /* brand bar with logos on each side — below the strip */
   .brand-bar{display:flex;align-items:center;justify-content:space-between;
-    padding:14px 18px;background:var(--bg)}
-  .brand-bar img{height:90px;width:auto;display:block}
+    gap:14px;padding:14px 18px;background:var(--bg)}
+  .brand-bar img{height:80px;width:auto;display:block;flex-shrink:0}
+  .brand-bar .wordmark{height:auto;max-height:80px;max-width:60%;width:auto}
   .brand-bar img.blend{mix-blend-mode:lighten}
-  @media (max-width:380px){.brand-bar img{height:72px}}
+  @media (max-width:480px){
+    .brand-bar{padding:12px 14px;gap:10px}
+    .brand-bar img{height:60px}
+    .brand-bar .wordmark{max-height:60px}
+  }
+  @media (max-width:360px){
+    .brand-bar img{height:50px}
+    .brand-bar .wordmark{max-height:50px}
+  }
+
+  @media (max-width:480px){
+    main{padding:34px 0 32px}
+    .wrap{padding:0 14px}
+    .check{width:62px;height:62px;margin-bottom:18px}
+    .check svg{width:32px;height:32px}
+    .confirm{margin-bottom:28px}
+    .step{padding:24px 18px;border-radius:16px}
+    .msg-box{padding:16px 14px}
+    .msg-box .msg{font-size:20px}
+    .ig-btn,.tt-btn{font-size:15px;padding:15px;gap:9px}
+    .ig-btn svg,.tt-btn svg{width:20px;height:20px}
+    .handle-note{font-size:12px}
+    .recap{margin-top:30px}
+    .recap-item{padding:12px 14px}
+    .recap-item p{font-size:13px}
+    .strip{font-size:11px;padding:9px 12px}
+  }
 </style>
 </head>
 <body>
@@ -121,7 +148,7 @@
 <div class="strip">⚡ Your application isn't complete yet — one step left</div>
 
 <div class="brand-bar">
-  <img src="bba-logo-transparent.png" alt="Better Body Academy">
+  <img src="bba-logo-transparent.png" alt="Better Body Academy" class="wordmark">
   <img src="Images/logo.png" alt="Better Body Academy">
 </div>
 
